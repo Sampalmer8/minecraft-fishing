@@ -43,15 +43,19 @@ function selectAlex() {
     steveImgEl.classList.remove("active");
     villagerImgEl.classList.remove("active");
 
+    // Update character selection variable
+    character = "Alex";
+}
+
 function selectVillager() {
     alexImgEl.classList.remove("active");
     steveImgEl.classList.remove("active");
     villagerImgEl.classList.add("active");
-}
 
     // Update character selection variable
-    character = "Alex";
+    character = "Villager";
 }
+
 
 function fishOnce() {
     // Test Current Character
