@@ -11,6 +11,8 @@ let numCodEl = document.getElementById("num-cod");
 let numSalmonEl = document.getElementById("num-salmon");
 let numTropicalEl = document.getElementById("num-tropical");
 let numPufferEl = document.getElementById("num-puffer");
+let plus5Btn = document.getElementById("plus5");
+let until200Btn = document.getElementById("until200");
 
 // Global Variables
 
@@ -25,7 +27,9 @@ let numPuffer = "0";
 steveImgEl.addEventListener("click", selectSteve);
 alexImgEl.addEventListener("click", selectAlex);
 fishBtnEl.addEventListener("click", fishOnce);
-villagerImgEl.addEventListener("click", selectVillager)
+villagerImgEl.addEventListener("click", selectVillager);
+plus5Btn.addEventListener("click", plus5);
+until200Btn.addEventListener("click", until200);
 
 function selectSteve() {
     // Update Active Border
@@ -121,5 +125,18 @@ function fishOnce() {
             imgResultEl.src = "img/Pufferfish.png";
             numPufferEl.innerHTML = numPuffer;
         }
+    }
+}
+
+function plus5() {
+    for(let n = 1; n <= 5; n++) {
+        fishOnce();
+    }
+}
+
+function until200() {
+    let codTarget = numCod + 200;
+    while(numCod < codTarget) {
+        fishOnce();
     }
 }
